@@ -2,10 +2,20 @@ const translations = {
     en: {
         welcome: "Welcome to NerdTrio",
         intro: "We help people with problems with laptops and PCs. Come to us for repair or advice!",
+        services: "Services",
+        contact: "Contact",
+        ourServices: "Our Services",
+        contactUs: "Contact Us",
+        contactInfo: "You can reach us via email at <a href='mailto:info@nerdtrio.nl'>info@nerdtrio.nl</a> or call us at <a href='tel:+31612345678'>+31 6 12345678</a>.",
     },
     nl: {
         welcome: "Welkom bij NerdTrio",
         intro: "Wij helpen mensen met problemen met laptops en pc's. Kom bij ons voor reparatie of advies!",
+        services: "Diensten",
+        contact: "Contact",
+        ourServices: "Onze Diensten",
+        contactUs: "Neem Contact Op",
+        contactInfo: "U kunt ons bereiken via e-mail op <a href='mailto:info@nerdtrio.nl'>info@nerdtrio.nl</a> of bel ons op <a href='tel:+31612345678'>+31 6 12345678</a>.",
     },
 };
 
@@ -16,7 +26,7 @@ document.getElementById("translate-btn").addEventListener("click", () => {
 
     document.querySelectorAll("[data-lang]").forEach((element) => {
         const key = element.getAttribute("data-lang");
-        element.textContent = translations[newLang][key];
+        element.innerHTML = translations[newLang][key];
     });
 
     document.getElementById("translate-btn").textContent =
