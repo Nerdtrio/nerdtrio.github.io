@@ -6,14 +6,35 @@
     <title>Welkom bij NerdTrio</title>
     <link rel="stylesheet" href="styles.css">
     <script src="translate.js" defer></script>
+    <script src="menu.js" defer></script>
 </head>
 <body>
     <header>
-        <h1 data-lang="welcome">Welkom bij NerdTrio</h1>
-        <button id="translate-btn">Translate to English</button>
+        <div class="container">
+            <h1 data-lang="welcome">Welkom bij NerdTrio</h1>
+            <button id="translate-btn">Translate to English</button>
+            <button class="hamburger" id="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <nav id="mobile-menu" class="hidden">
+            <ul>
+                <li><a href="#services" data-lang="services">Diensten</a></li>
+                <li><a href="#contact" data-lang="contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
-        <p data-lang="intro">Wij helpen mensen met problemen met laptops en pc's. Kom bij ons voor reparatie of advies!</p>
+        <section id="services">
+            <h2 data-lang="our-services">Onze Diensten</h2>
+            <p data-lang="intro">Wij helpen mensen met problemen met laptops en pc's. Kom bij ons voor reparatie of advies!</p>
+        </section>
+        <section id="contact">
+            <h2 data-lang="contact-us">Neem Contact Op</h2>
+            <p data-lang="contact-info">U kunt ons bereiken via e-mail op <a href="mailto:info@nerdtrio.nl">info@nerdtrio.nl</a> of bel ons op <a href="tel:+31612345678">+31 6 12345678</a>.</p>
+        </section>
     </main>
     <footer>
         <p>&copy; 2026 NerdTrio. Alle rechten voorbehouden.</p>
